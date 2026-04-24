@@ -16,22 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // In a real application, you would send this data to a server
-            console.log('Form Submitted:', { name, email, message });
-            
+        contactForm.addEventListener('submit', () => {
             // Provide feedback to the user
-            alert(`감사합니다, ${name}님! 메시지가 성공적으로 전송되었습니다. 곧 연락드리겠습니다.`);
-            
-            // Reset the form
-            contactForm.reset();
+            const name = document.getElementById('name').value;
+            alert(`감사합니다, ${name}님! 메시지가 전송됩니다.`);
         });
     }
 

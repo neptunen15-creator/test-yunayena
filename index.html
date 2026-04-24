@@ -46,7 +46,7 @@
                 <!-- Yuna's Profile -->
                 <div class="profile-card">
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Yuna Profile">
+                        <img src="images/yuna.jpg" alt="Yuna Profile">
                     </div>
                     <div class="about-text">
                         <h3>맏이 윤아 (10세)</h3>
@@ -62,7 +62,7 @@
                 <!-- Yena's Profile -->
                 <div class="profile-card">
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1544126592-807daa215a75?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Yena Profile">
+                        <img src="images/yena.jpg" alt="Yena Profile">
                     </div>
                     <div class="about-text">
                         <h3>귀염둥이 예나 (7세)</h3>
@@ -113,17 +113,17 @@
             </div>
             <div class="contact-content">
                 <p style="text-align: center; margin-bottom: 2rem;">윤아와 예나에게 응원의 메시지를 남겨주세요!</p>
-                <form id="contact-form" class="contact-form">
+                <form action="https://formspree.io/f/xlgaakbe" method="POST" id="contact-form" class="contact-form">
                     <div class="form-group">
                         <label for="name">성함</label>
                         <input type="text" id="name" name="name" placeholder="성함을 입력해주세요" required>
                     </div>
                     <div class="form-group">
                         <label for="email">이메일</label>
-                        <input type="email" id="email" name="email" placeholder="이메일을 입력해주세요" required>
+                        <input type="email" id="email" name="_replyto" placeholder="이메일을 입력해주세요" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">메시지</label>
+                        <label for="message">메시지 (제휴 문의 등)</label>
                         <textarea id="message" name="message" rows="5" placeholder="메시지를 남겨주세요" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-submit">보내기</button>

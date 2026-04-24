@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- TensorFlow.js and Teachable Machine Image library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script defer src="main.js"></script>
 </head>
 <body>
@@ -20,8 +23,10 @@
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#test">Test</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#comments">Comments</a></li>
             </ul>
         </nav>
     </header>
@@ -73,6 +78,30 @@
                             <span class="tag">#막내</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animal Look Test Section -->
+        <section id="test" class="test container">
+            <div class="section-title">
+                <h2>동물상 테스트</h2>
+                <p>윤아와 예나가 준비한 인공지능 동물상 테스트! 나는 강아지상일까, 고양이상일까?</p>
+                <div class="underline"></div>
+            </div>
+            <div class="test-container">
+                <div class="upload-box" id="upload-box">
+                    <p>사진을 업로드하거나 드래그하세요</p>
+                    <input type="file" id="image-upload" accept="image/*" hidden>
+                    <button class="btn btn-primary" onclick="document.getElementById('image-upload').click()">사진 선택</button>
+                </div>
+                <div id="image-preview-container" style="display: none;">
+                    <img id="image-preview" src="#" alt="your image" style="max-width: 300px; border-radius: 20px; margin: 1rem auto; display: block;">
+                </div>
+                <div id="result-container" style="display: none; text-align: center; margin-top: 2rem;">
+                    <h3 id="result-message" style="font-size: 2rem; color: var(--primary-color); margin-bottom: 1rem;">분석 중...</h3>
+                    <div id="label-container" style="margin-bottom: 2rem;"></div>
+                    <button class="btn btn-primary" onclick="location.reload()">다시 하기</button>
                 </div>
             </div>
         </section>
@@ -129,6 +158,24 @@
                     <button type="submit" class="btn btn-submit">보내기</button>
                 </form>
             </div>
+        </section>
+
+        <!-- Disqus Comments Section -->
+        <section id="comments" class="comments container">
+            <div class="section-title">
+                <h2>Comments</h2>
+                <div class="underline"></div>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://yunayena.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </section>
     </main>
 

@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
         prediction.sort((a, b) => b.probability - a.probability);
         
         const topResult = prediction[0];
-        // Check if className contains 'dog' or 'cat' (case insensitive)
-        const isDog = (name) => name.toLowerCase().includes('dog') || name.includes('강아지');
+        // Check if className contains 'dog', '강아지', or '개' (case insensitive)
+        const isDog = (name) => name.toLowerCase().includes('dog') || name.includes('강아지') || name.includes('개');
         
         let animalType = isDog(topResult.className) ? '강아지' : '고양이';
         resultMessage.innerText = `당신은 ${animalType}상입니다!`;
